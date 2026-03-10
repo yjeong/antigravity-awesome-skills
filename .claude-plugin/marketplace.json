@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "antigravity-awesome-skills",
+  "description": "1,232+ agentic skills for Claude Code and other AI coding assistants",
+  "owner": {
+    "name": "Antigravity Community"
+  },
+  "plugins": [
+    {
+      "name": "antigravity",
+      "description": "1,232+ battle-tested agentic skills covering development, security, data engineering, testing, infrastructure, and more",
+      "source": "..",
+      "category": "productivity"
+    }
+  ]
+}
