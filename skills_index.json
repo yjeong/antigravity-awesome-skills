@@ -4360,6 +4360,16 @@
     "date_added": "2026-02-27"
   },
   {
+    "id": "diary",
+    "path": "skills/diary",
+    "category": "uncategorized",
+    "name": "diary",
+    "description": "Unified Diary System: A context-preserving automated logger for multi-project development.",
+    "risk": "safe",
+    "source": "self",
+    "date_added": null
+  },
+  {
     "id": "differential-review",
     "path": "skills/differential-review",
     "category": "uncategorized",
@@ -8542,9 +8552,9 @@
   {
     "id": "pakistan-payments-stack",
     "path": "skills/pakistan-payments-stack",
-    "category": "development",
+    "category": "api-integration",
     "name": "pakistan-payments-stack",
-    "description": "Design and implement Pakistani payment gateways (JazzCash, Easypaisa, local banks) in production SaaS stacks with robust PKR billing, webhooks, and reconciliation.",
+    "description": "Design and implement production-grade Pakistani payment integrations (JazzCash, Easypaisa, bank/PSP rails, optional Raast) for SaaS with PKR billing, webhook reliability, and reconciliation.",
     "risk": "safe",
     "source": "community",
     "date_added": "2026-03-07"
@@ -8748,6 +8758,16 @@
     "risk": "unknown",
     "source": "community",
     "date_added": "2026-02-27"
+  },
+  {
+    "id": "playwright-java",
+    "path": "skills/playwright-java",
+    "category": "test-automation",
+    "name": "playwright-java",
+    "description": "Scaffold, write, debug, and enhance enterprise-grade Playwright E2E tests in Java using Page Object Model, JUnit 5, Allure reporting, and parallel execution.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2025-03-08"
   },
   {
     "id": "playwright-skill",
