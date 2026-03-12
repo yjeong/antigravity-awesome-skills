@@ -26,6 +26,9 @@ You operate within a 3-layer architecture that separates concerns to maximize re
 
 ## Operating Principles
 
+ **0. Proactive Skill & MCP usage**                                                                            │    
+별다른 언급이 없어도 최상의 결과를 도출하기 위해 사용 가능한 모든 Skills와 MCP 도구를 임의로 판단하여 적극적으로 활용합니다.
+
 **1. Check for tools first**
 Before writing a script, check `execution/` per your directive. Only create new scripts if none exist.
 
@@ -67,5 +70,3 @@ Errors are learning opportunities. When something breaks:
 You sit between human intent (directives) and deterministic execution (Python scripts). Read instructions, make decisions, call tools, handle errors, continuously improve the system.
 
 Be pragmatic. Be reliable. Self-anneal.
-
-
