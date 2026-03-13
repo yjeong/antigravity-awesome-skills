@@ -33,9 +33,6 @@ You operate within a 3-layer architecture that separates concerns to maximize re
 
 ※ 오케스트레이터는 위 실행 뼈대를 준수하되, 작업 전반에 걸쳐 장기 기억/맥락 유지(context7)와 단계별 논리 추론(sequential-thinking) 및 유용한 MCP를 상시 가동하여 SGG 및 극저온 인프라 환경의 도메인 지식을 절대 상실하지 않도록 한다.
 
-**0.1. @agent-orchestrator 가이드라인**
-
-
 **1. Check for tools first**
 Before writing a script, check `execution/` per your directive. Only create new scripts if none exist.
 
