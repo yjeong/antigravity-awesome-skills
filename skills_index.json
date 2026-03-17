@@ -340,6 +340,16 @@
     "date_added": "2026-02-27"
   },
   {
+    "id": "ai-engineering-toolkit",
+    "path": "skills/ai-engineering-toolkit",
+    "category": "data-ai",
+    "name": "ai-engineering-toolkit",
+    "description": "6 production-ready AI engineering workflows: prompt evaluation (8-dimension scoring), context budget planning, RAG pipeline design, agent security audit (65-point checklist), eval harness building, and product sense coaching.",
+    "risk": "offensive",
+    "source": "community",
+    "date_added": "2026-03-15"
+  },
+  {
     "id": "ai-md",
     "path": "skills/ai-md",
     "category": "uncategorized",
@@ -358,6 +368,16 @@
     "risk": "safe",
     "source": "personal",
     "date_added": "2026-02-27"
+  },
+  {
+    "id": "ai-native-cli",
+    "path": "skills/ai-native-cli",
+    "category": "uncategorized",
+    "name": "ai-native-cli",
+    "description": "Design spec with 98 rules for building CLI tools that AI agents can safely use. Covers structured JSON output, error handling, input contracts, safety guardrails, exit codes, and agent self-description.",
+    "risk": "safe",
+    "source": "https://github.com/ChaosRealmsAI/agent-cli-spec",
+    "date_added": "2026-03-15"
   },
   {
     "id": "ai-product",
@@ -480,6 +500,16 @@
     "date_added": "2026-02-27"
   },
   {
+    "id": "analyze-project",
+    "path": "skills/analyze-project",
+    "category": "uncategorized",
+    "name": "analyze-project",
+    "description": "Forensic root cause analyzer for Antigravity sessions. Classifies scope deltas, rework patterns, root causes, hotspots, and auto-improves prompts/health.",
+    "risk": "unknown",
+    "source": "unknown",
+    "date_added": null
+  },
+  {
     "id": "andrej-karpathy",
     "path": "skills/andrej-karpathy",
     "category": "uncategorized",
@@ -588,6 +618,16 @@
     "risk": "safe",
     "source": "community",
     "date_added": "2026-03-07"
+  },
+  {
+    "id": "antigravity-skill-orchestrator",
+    "path": "skills/antigravity-skill-orchestrator",
+    "category": "meta",
+    "name": "antigravity-skill-orchestrator",
+    "description": "A meta-skill that understands task requirements, dynamically selects appropriate skills, tracks successful skill combinations using agent-memory-mcp, and prevents skill overuse for simple tasks.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-03-13"
   },
   {
     "id": "antigravity-workflows",
@@ -1158,6 +1198,16 @@
     "risk": "safe",
     "source": "https://github.com/zxkane/aws-skills",
     "date_added": "2026-02-27"
+  },
+  {
+    "id": "awt-e2e-testing",
+    "path": "skills/awt-e2e-testing",
+    "category": "uncategorized",
+    "name": "awt-e2e-testing",
+    "description": "AI-powered E2E web testing \u2014 eyes and hands for AI coding tools. Declarative YAML scenarios, Playwright execution, visual matching (OpenCV + OCR), platform auto-detection (Flutter/React/Vue), learning DB. Install: npx skills add ksgisang/awt-skill --skill awt -g",
+    "risk": "unknown",
+    "source": "unknown",
+    "date_added": null
   },
   {
     "id": "azd-deployment",
@@ -3504,10 +3554,10 @@
     "path": "skills/comprehensive-review-pr-enhance",
     "category": "uncategorized",
     "name": "comprehensive-review-pr-enhance",
-    "description": "You are a PR optimization expert specializing in creating high-quality pull requests that facilitate efficient code reviews. Generate comprehensive PR descriptions, automate review processes, and e...",
+    "description": "Generate structured PR descriptions from diffs, add review checklists, risk assessments, and test coverage summaries. Use when the user says \"write a PR description\", \"improve this PR\", \"summarize my changes\", \"PR review\", \"pull request\", or asks to document a diff for reviewers.",
     "risk": "unknown",
-    "source": "community",
-    "date_added": "2026-02-27"
+    "source": "unknown",
+    "date_added": null
   },
   {
     "id": "computer-use-agents",
@@ -4708,6 +4758,16 @@
     "risk": "safe",
     "source": "community",
     "date_added": "2026-03-06"
+  },
+  {
+    "id": "electron-development",
+    "path": "skills/electron-development",
+    "category": "uncategorized",
+    "name": "electron-development",
+    "description": "Master Electron desktop app development with secure IPC, contextIsolation, preload scripts, multi-process architecture, electron-builder packaging, code signing, and auto-update.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-03-12"
   },
   {
     "id": "elixir-pro",
@@ -6820,6 +6880,16 @@
     "date_added": "2026-03-06"
   },
   {
+    "id": "k6-load-testing",
+    "path": "skills/k6-load-testing",
+    "category": "testing",
+    "name": "k6-load-testing",
+    "description": "Comprehensive k6 load testing skill for API, browser, and scalability testing. Write realistic load scenarios, analyze results, and integrate with CI/CD.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-03-13"
+  },
+  {
     "id": "k8s-manifest-generator",
     "path": "skills/k8s-manifest-generator",
     "category": "uncategorized",
@@ -6968,6 +7038,16 @@
     "risk": "unknown",
     "source": "community",
     "date_added": "2026-02-27"
+  },
+  {
+    "id": "latex-paper-conversion",
+    "path": "skills/latex-paper-conversion",
+    "category": "uncategorized",
+    "name": "latex-paper-conversion",
+    "description": "This skill should be used when the user asks to convert an academic paper in LaTeX from one format (e.g., Springer, IPOL) to another format (e.g., MDPI, IEEE, Nature). It automates extraction, injection, fixing formatting, and compiling.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-03-14"
   },
   {
     "id": "launch-strategy",
@@ -7258,6 +7338,16 @@
     "risk": "safe",
     "source": "community",
     "date_added": "2026-03-04"
+  },
+  {
+    "id": "llm-structured-output",
+    "path": "skills/llm-structured-output",
+    "category": "uncategorized",
+    "name": "llm-structured-output",
+    "description": "Get reliable JSON, enums, and typed objects from LLMs using response_format, tool_use, and schema-constrained decoding across OpenAI, Anthropic, and Google APIs.\n",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-03-12"
   },
   {
     "id": "local-legal-seo-audit",
@@ -9050,6 +9140,16 @@
     "date_added": "2026-02-27"
   },
   {
+    "id": "privacy-by-design",
+    "path": "skills/privacy-by-design",
+    "category": "uncategorized",
+    "name": "privacy-by-design",
+    "description": "Use when building apps that collect user data. Ensures privacy protections are built in from the start\u2014data minimization, consent, encryption.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-02-23"
+  },
+  {
     "id": "privilege-escalation-methods",
     "path": "skills/privilege-escalation-methods",
     "category": "uncategorized",
@@ -9498,6 +9598,16 @@
     "risk": "safe",
     "source": "https://github.com/Shpigford/skills/tree/main/readme",
     "date_added": "2026-02-27"
+  },
+  {
+    "id": "recallmax",
+    "path": "skills/recallmax",
+    "category": "memory",
+    "name": "recallmax",
+    "description": "FREE \u2014 God-tier long-context memory for AI agents. Injects 500K-1M clean tokens, auto-summarizes with tone/intent preservation, compresses 14-turn history into 800 tokens.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-03-13"
   },
   {
     "id": "receiving-code-review",
@@ -11458,6 +11568,16 @@
     "risk": "safe",
     "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/tool-design",
     "date_added": "2026-02-27"
+  },
+  {
+    "id": "tool-use-guardian",
+    "path": "skills/tool-use-guardian",
+    "category": "reliability",
+    "name": "tool-use-guardian",
+    "description": "FREE \u2014 Intelligent tool-call reliability wrapper. Monitors, retries, fixes, and learns from tool failures. Auto-recovers from truncated JSON, timeouts, rate limits, and mid-chain failures.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-03-13"
   },
   {
     "id": "top-web-vulnerabilities",
