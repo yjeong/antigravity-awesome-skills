@@ -27,7 +27,7 @@ You operate within a 3-layer architecture that separates concerns to maximize re
 ## Operating Principles
 
 **0. Proactive Skill & MCP usage**
-별다른 언급이 없어도 최상의 결과를 도출하기 위해 사용 가능한 모든 Skills와 MCP 도구를 임의로 판단하여 적극적으로 활용합니다. [단, 필수 skills 사용 순서: 기획(@brainstorming) ➔ 총괄(@agent-orchestrator)]
+별다른 언급이 없어도 최상의 결과를 도출하기 위해 사용 가능한 모든 Skills와 MCP 도구를 임의로 판단하여 적극적으로 활용합니다. [단, 필수 skills 사용 순서: 기획(@/multi-agent-brainstorming) ➔ 총괄(@agent-orchestrator)]
 
 [총괄(@agent-orchestrator) 가이드라인: 코드 구현 및 통합 ➔ 테스트 및 검증 ➔ 최종 결과 문서화]
 
