@@ -1,7 +1,7 @@
-<!-- registry-sync: version=8.0.0; skills=1262; stars=24842; updated_at=2026-03-16T15:03:26+00:00 -->
-# 🌌 Antigravity Awesome Skills: 1,262+ Agentic Skills for Claude Code, Gemini CLI, Cursor, Copilot & More
+<!-- registry-sync: version=8.2.0; skills=1272; stars=25526; updated_at=2026-03-18T11:57:57+00:00 -->
+# 🌌 Antigravity Awesome Skills: 1,272+ Agentic Skills for Claude Code, Gemini CLI, Cursor, Copilot & More
 
-> **The Ultimate Collection of 1,262+ Universal Agentic Skills for AI Coding Assistants — Claude Code, Gemini CLI, Codex CLI, Antigravity IDE, GitHub Copilot, Cursor, OpenCode, AdaL**
+> **The Ultimate Collection of 1,272+ Universal Agentic Skills for AI Coding Assistants — Claude Code, Gemini CLI, Codex CLI, Antigravity IDE, GitHub Copilot, Cursor, OpenCode, AdaL**
 
 [![GitHub stars](https://img.shields.io/badge/⭐%2024%2C000%2B%20Stars-gold?style=for-the-badge)](https://github.com/sickn33/antigravity-awesome-skills/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -18,9 +18,9 @@
 [![Web App](https://img.shields.io/badge/Web%20App-Browse%20Skills-blue)](apps/web-app)
 [![Buy Me a Book](https://img.shields.io/badge/Buy%20me%20a-book-d13610?logo=buymeacoffee&logoColor=white)](https://buymeacoffee.com/sickn33)
 
-**Antigravity Awesome Skills** is a curated, battle-tested library of **1,262+ high-performance agentic skills** designed to work seamlessly across the major AI coding assistants.
+**Antigravity Awesome Skills** is a curated, battle-tested library of **1,272+ high-performance agentic skills** designed to work seamlessly across the major AI coding assistants.
 
-**Current release: V8.0.0.** This repository gives your agent reusable playbooks for planning, coding, debugging, testing, security review, infrastructure work, product thinking, and much more.
+**Current release: V8.2.0.** This repository gives your agent reusable playbooks for planning, coding, debugging, testing, security review, infrastructure work, product thinking, and much more.
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@
 - [🎁 Curated Collections (Bundles)](#curated-collections)
 - [🧭 Antigravity Workflows](#antigravity-workflows)
 - [📦 Features & Categories](#features--categories)
-- [📚 Browse 1,262+ Skills](#browse-1262-skills)
+- [📚 Browse 1,272+ Skills](#browse-1272-skills)
 - [🤝 Contributing](#contributing)
 - [💬 Community](#community)
 - [☕ Support the Project](#support-the-project)
@@ -50,7 +50,7 @@
 
 ### 1. 🐣 Context: What is this?
 
-**Antigravity Awesome Skills** (Release 8.0.0) is a broad, production-oriented upgrade to your AI's capabilities.
+**Antigravity Awesome Skills** (Release 8.2.0) adds six community skills, repairs Claude marketplace metadata, fixes malformed skill content, and keeps the docs, credits, and release path aligned after the latest maintainer sweep.
 
 AI Agents (like Claude Code, Cursor, or Gemini) are smart, but they lack **specific tools**. They don't know your company's "Deployment Protocol" or the specific syntax for "AWS CloudFormation".
 **Skills** are small markdown files that teach them how to do these specific tasks perfectly, every time.
@@ -304,7 +304,7 @@ The repository is organized into specialized domains to transform your AI into a
 
 Counts change as new skills are added. For the current full registry, see [CATALOG.md](CATALOG.md).
 
-## Browse 1,262+ Skills
+## Browse 1,272+ Skills
 
 - Open the interactive browser in [`apps/web-app`](apps/web-app).
 - Read the full catalog in [`CATALOG.md`](CATALOG.md).
@@ -381,8 +381,9 @@ That will copy the generated skill index into `apps/web-app/public/skills.json`,
 
 ## Community
 
-- [Discussions](https://github.com/sickn33/antigravity-awesome-skills/discussions) for questions and feedback.
-- [Issues](https://github.com/sickn33/antigravity-awesome-skills/issues) for bugs and improvement requests.
+- [Discussions](https://github.com/sickn33/antigravity-awesome-skills/discussions) for questions, ideas, showcase posts, and community feedback.
+- [Issues](https://github.com/sickn33/antigravity-awesome-skills/issues) for reproducible bugs and concrete, actionable improvement requests.
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) for community expectations and moderation standards.
 - [`SECURITY.md`](SECURITY.md) for security reporting.
 
 ## Support the Project
@@ -458,6 +459,7 @@ This collection would not be possible without the incredible work of the Claude 
 - **[christopherlhammer11-ai/tool-use-guardian](https://github.com/christopherlhammer11-ai/tool-use-guardian)**: Source for the Tool Use Guardian skill — tool-call reliability wrapper with retries, recovery, and failure classification.
 - **[christopherlhammer11-ai/recallmax](https://github.com/christopherlhammer11-ai/recallmax)**: Source for the RecallMax skill — long-context memory, summarization, and conversation compression for agents.
 - **[tsilverberg/webapp-uat](https://github.com/tsilverberg/webapp-uat)**: Full browser UAT skill — Playwright testing with console/network error capture, WCAG 2.2 AA accessibility checks, i18n validation, responsive testing, and P0-P3 bug triage. Read-only by default, works with React, Vue, Angular, Ionic, Next.js.
+- **[Wolfe-Jam/faf-skills](https://github.com/Wolfe-Jam/faf-skills)**: AI-context and project DNA skills — .faf format management, AI-readiness scoring, bi-sync, MCP server building, and championship-grade testing (17 skills, MIT).
 
 ### Inspirations
 
@@ -478,6 +480,11 @@ Made with [contrib.rocks](https://contrib.rocks). *(Image may be cached; [view l
 
 We officially thank the following contributors for their help in making this repository awesome!
 
+- [@JayeHarrill](https://github.com/JayeHarrill)
+- [@wd041216-bit](https://github.com/wd041216-bit)
+- [@Champbreed](https://github.com/Champbreed)
+- [@suhaibjanjua](https://github.com/suhaibjanjua)
+- [@Wolfe-Jam](https://github.com/Wolfe-Jam)
 - [@sck000](https://github.com/sck000)
 - [@github-actions[bot]](https://github.com/apps/github-actions)
 - [@sickn33](https://github.com/sickn33)
@@ -558,6 +565,10 @@ We officially thank the following contributors for their help in making this rep
 - [@Gizzant](https://github.com/Gizzant)
 - [@Digidai](https://github.com/Digidai)
 - [@dbhat93](https://github.com/dbhat93)
+- [@BenZinaDaze](https://github.com/BenZinaDaze)
+- [@JaskiratAnand](https://github.com/JaskiratAnand)
+- [@marsiandeployer](https://github.com/marsiandeployer)
+- [@suhaibjanjua](https://github.com/suhaibjanjua)
 - [@decentraliser](https://github.com/decentraliser)
 - [@MAIOStudio](https://github.com/MAIOStudio)
 - [@conorbronsdon](https://github.com/conorbronsdon)
