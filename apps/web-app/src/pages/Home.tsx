@@ -5,7 +5,54 @@ import { useSkills } from '../context/SkillContext';
 import { SkillCard } from '../components/SkillCard';
 import type { SyncMessage, CategoryStats } from '../types';
 import { usePageMeta } from '../hooks/usePageMeta';
-import { APP_HOME_CATALOG_COUNT, buildHomeMeta } from '../utils/seo';
+import { buildHomeMeta, getHomeFaqItems } from '../utils/seo';
+
+const conceptCards = [
+  {
+    title: 'Skills',
+    body: 'Reusable SKILL.md playbooks that teach an AI assistant how to execute a workflow with better structure and context.',
+  },
+  {
+    title: 'MCP tools',
+    body: 'External capabilities and system integrations the assistant can call. Tools provide actions; skills tell the assistant how to use them well.',
+  },
+  {
+    title: 'Bundles',
+    body: 'Curated starting sets of recommended skills for a role, domain, or team that wants a smaller shortlist first.',
+  },
+  {
+    title: 'Workflows',
+    body: 'Ordered execution playbooks that show how to combine multiple skills step by step for a concrete outcome.',
+  },
+] as const;
+
+const integrationGuides = [
+  {
+    name: 'Claude Code',
+    href: 'https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/claude-code-skills.md',
+    body: 'Install paths, starter prompts, plugin marketplace flow, and first skills to try.',
+  },
+  {
+    name: 'Cursor',
+    href: 'https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/cursor-skills.md',
+    body: 'A practical guide for chat-first UI, frontend, and full-stack workflows in Cursor.',
+  },
+  {
+    name: 'Codex CLI',
+    href: 'https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/codex-cli-skills.md',
+    body: 'How to use Antigravity Awesome Skills with Codex CLI for planning, implementation, testing, and review.',
+  },
+  {
+    name: 'Gemini CLI',
+    href: 'https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/gemini-cli-skills.md',
+    body: 'A broad starting point for engineering, agent systems, integrations, and applied AI workflows.',
+  },
+] as const;
+
+const syncFeatureEnabled = (
+  (import.meta as ImportMeta & { env: Record<string, string | undefined> }).env.VITE_ENABLE_SKILLS_SYNC
+  === 'true'
+);
 
 export function Home(): React.ReactElement {
   const { skills, stars, loading, error, refreshSkills } = useSkills();
@@ -19,6 +66,8 @@ export function Home(): React.ReactElement {
   const installCommand = 'npx antigravity-awesome-skills';
   const docsLink = 'https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/usage.md';
   const installLink = 'https://www.npmjs.com/package/antigravity-awesome-skills';
+  const faqItems = getHomeFaqItems();
+  const catalogCountLabel = skills.length > 0 ? skills.length.toLocaleString('en-US') : 'installable';
 
   usePageMeta(buildHomeMeta(skills.length));
 
@@ -154,7 +203,7 @@ export function Home(): React.ReactElement {
           <div>
             <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 mb-2">Explore Skills</h1>
             <p className="text-slate-500 dark:text-slate-400">
-              Discover {Math.max(skills.length, APP_HOME_CATALOG_COUNT)}+ agentic capabilities for your AI assistant.
+              Discover {catalogCountLabel} agentic capabilities for your AI assistant.
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -168,16 +217,27 @@ export function Home(): React.ReactElement {
                 {syncMsg.text}
               </span>
             )}
-            <button
-              onClick={handleSync}
-              disabled={syncing}
-              className="flex items-center space-x-2 px-4 py-2.5 rounded-lg font-medium text-sm bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-50 disabled:cursor-wait transition-colors shadow-sm"
-            >
-              <RefreshCw className={`h-4 w-4 ${syncing ? 'animate-spin' : ''}`} />
-              <span>{syncing ? 'Syncing...' : 'Sync Skills'}</span>
-            </button>
+            {syncFeatureEnabled ? (
+              <button
+                onClick={handleSync}
+                disabled={syncing}
+                className="flex items-center space-x-2 px-4 py-2.5 rounded-lg font-medium text-sm bg-indigo-600 hover:bg-indigo-700 text-white disabled:opacity-50 disabled:cursor-wait transition-colors shadow-sm"
+              >
+                <RefreshCw className={`h-4 w-4 ${syncing ? 'animate-spin' : ''}`} />
+                <span>{syncing ? 'Syncing...' : 'Sync Skills'}</span>
+              </button>
+            ) : (
+              <span className="rounded-full bg-slate-100 dark:bg-slate-800 px-3 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-300">
+                Public catalog mode
+              </span>
+            )}
           </div>
         </div>
+        {!syncFeatureEnabled && (
+          <p className="text-sm text-slate-500 dark:text-slate-400 -mt-4">
+            Catalog sync is a maintainer-only workflow in local builds, so the public Pages site always shows the last published catalog.
+          </p>
+        )}
 
         <div className="flex flex-col space-y-4 md:flex-row md:items-center md:space-x-4 md:space-y-0 bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm sticky top-0 z-40">
           <div className="relative flex-1">
@@ -216,7 +276,7 @@ export function Home(): React.ReactElement {
               onChange={(e) => setSortBy(e.target.value)}
             >
               <option value="default">Default</option>
-              <option value="stars">⭐ Most Stars</option>
+              <option value="stars">⭐ Community saves</option>
               <option value="newest">🆕 Newest</option>
               <option value="az">🔤 A → Z</option>
             </select>
@@ -261,6 +321,110 @@ export function Home(): React.ReactElement {
             }}
           />
         )}
+      </div>
+
+      <div className="mt-12 space-y-10">
+        <section className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-3">
+            Concepts
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+            Understand the moving pieces before you install everything
+          </h2>
+          <p className="mt-3 max-w-4xl text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
+            The catalog is easier to navigate once you separate reusable playbooks from external tool integrations.
+            Skills explain how to execute a workflow well, MCP tools expose external systems, bundles narrow the
+            starting set, and workflows show the order of operations.
+          </p>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {conceptCards.map((card) => (
+              <article
+                key={card.title}
+                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-4"
+              >
+                <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">{card.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{card.body}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a
+              href="https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/skills-vs-mcp-tools.md"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              Read skills vs MCP/tools
+            </a>
+            <a
+              href="https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              Browse bundles
+            </a>
+            <a
+              href="https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              Explore workflows
+            </a>
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-3">
+            Integration Guides
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+            Start from the guide that matches your AI assistant
+          </h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            {integrationGuides.map((guide) => (
+              <a
+                key={guide.name}
+                href={guide.href}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-4 transition-colors hover:border-indigo-300 dark:hover:border-indigo-700"
+              >
+                <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">{guide.name}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{guide.body}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-7 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 mb-3">
+            Quick FAQ
+          </p>
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+            Answers to the first questions most users ask
+          </h2>
+          <div className="mt-6 grid gap-4 lg:grid-cols-2">
+            {faqItems.map((item) => (
+              <article
+                key={item.question}
+                className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-4"
+              >
+                <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">{item.question}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+          <a
+            href="https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/faq.md"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-flex items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 px-4 py-2.5 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
+          >
+            Read the full FAQ
+          </a>
+        </section>
       </div>
     </div>
   );

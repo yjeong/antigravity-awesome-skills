@@ -1,5 +1,6 @@
 import os
 import json
+import pathlib
 import re
 import sys
 from collections.abc import Mapping
@@ -7,6 +8,8 @@ from datetime import date, datetime
 
 import yaml
 from _project_paths import find_repo_root
+from plugin_compatibility import build_report as build_plugin_compatibility_report
+from plugin_compatibility import compatibility_by_path as plugin_compatibility_by_path
 
 # Ensure UTF-8 output for Windows compatibility
 if sys.platform == 'win32':
@@ -805,14 +808,24 @@ def normalize_yaml_value(value):
         return [normalize_yaml_value(item) for item in value]
     if isinstance(value, (date, datetime)):
         return value.isoformat()
+    if isinstance(value, (bytes, bytearray)):
+        return bytes(value).decode("utf-8", errors="replace")
     return value
+
+
+def coerce_metadata_text(value):
+    if value is None or isinstance(value, (Mapping, list, tuple, set)):
+        return None
+    if isinstance(value, str):
+        return value
+    return str(value)
 
 def parse_frontmatter(content):
     """
     Parses YAML frontmatter, sanitizing unquoted values containing @.
     Handles single values and comma-separated lists by quoting the entire line.
     """
-    fm_match = re.search(r'^---\s*\n(.*?)\n---', content, re.DOTALL)
+    fm_match = re.search(r'^---\s*\n(.*?)\n?---(?:\s*\n|$)', content, re.DOTALL)
     if not fm_match:
         return {}
     
@@ -846,9 +859,12 @@ def parse_frontmatter(content):
         print(f"⚠️ YAML parsing error: {e}")
         return {}
 
-def generate_index(skills_dir, output_file):
+def generate_index(skills_dir, output_file, compatibility_report=None):
     print(f"🏗️ Generating index from: {skills_dir}")
     skills = []
+    if compatibility_report is None:
+        compatibility_report = build_plugin_compatibility_report(pathlib.Path(skills_dir))
+    compatibility_lookup = plugin_compatibility_by_path(compatibility_report)
 
     for root, dirs, files in os.walk(skills_dir):
         # Skip .disabled or hidden directories
@@ -873,7 +889,19 @@ def generate_index(skills_dir, output_file):
                 "description": "",
                 "risk": "unknown",
                 "source": "unknown",
-                "date_added": None
+                "date_added": None,
+                "plugin": {
+                    "targets": {
+                        "codex": "supported",
+                        "claude": "supported",
+                    },
+                    "setup": {
+                        "type": "none",
+                        "summary": "",
+                        "docs": None,
+                    },
+                    "reasons": [],
+                },
             }
             
             try:
@@ -887,15 +915,27 @@ def generate_index(skills_dir, output_file):
             metadata = parse_frontmatter(content)
             
             # Merge Metadata (frontmatter takes priority)
-            if "name" in metadata: skill_info["name"] = metadata["name"]
-            if "description" in metadata: skill_info["description"] = metadata["description"]
-            if "risk" in metadata: skill_info["risk"] = metadata["risk"]
-            if "source" in metadata: skill_info["source"] = metadata["source"]
-            if "date_added" in metadata: skill_info["date_added"] = metadata["date_added"]
+            name = coerce_metadata_text(metadata.get("name"))
+            description = coerce_metadata_text(metadata.get("description"))
+            risk = coerce_metadata_text(metadata.get("risk"))
+            source = coerce_metadata_text(metadata.get("source"))
+            date_added = coerce_metadata_text(metadata.get("date_added"))
+            category = coerce_metadata_text(metadata.get("category"))
+
+            if name is not None:
+                skill_info["name"] = name
+            if description is not None:
+                skill_info["description"] = description
+            if risk is not None:
+                skill_info["risk"] = risk
+            if source is not None:
+                skill_info["source"] = source
+            if date_added is not None:
+                skill_info["date_added"] = date_added
             
             # Category: prefer frontmatter, then folder structure, then conservative inference
-            if "category" in metadata:
-                skill_info["category"] = metadata["category"]
+            if category is not None:
+                skill_info["category"] = category
             elif skill_info["category"] is None:
                 inferred_category = infer_category(
                     skill_info["id"],
@@ -906,6 +946,14 @@ def generate_index(skills_dir, output_file):
             if skill_info["id"] in CURATED_CATEGORY_OVERRIDES:
                 skill_info["category"] = CURATED_CATEGORY_OVERRIDES[skill_info["id"]]
             skill_info["category"] = normalize_category(skill_info["category"])
+
+            plugin_info = compatibility_lookup.get(skill_info["path"])
+            if plugin_info:
+                skill_info["plugin"] = {
+                    "targets": dict(plugin_info["targets"]),
+                    "setup": dict(plugin_info["setup"]),
+                    "reasons": list(plugin_info["reasons"]),
+                }
             
             # Fallback for description if missing in frontmatter (legacy support)
             if not skill_info["description"]:

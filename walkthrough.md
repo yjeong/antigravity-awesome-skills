@@ -1,3 +1,84 @@
+# Maintenance Walkthrough - 2026-03-30
+
+- Merged PR #418 on GitHub with squash after approving the pending fork workflow run and waiting for `pr-policy`, `source-validation`, and `artifact-preview` to finish green.
+- Repaired PR #423's stale metadata state by updating the PR body to include the required Quality Bar Checklist, then closed and reopened it to force fresh `pull_request` runs before squash merging it on GitHub.
+- Synced local `main` after the PR merge batch so release preparation starts from the canonical remote state.
+- Resolved issue #421 by ensuring the `README.md` Community Contributed Skills section includes `SoulPass` on `main`.
+- Resolved issue #419 by tightening the `github-issue-creator` frontmatter description and "When to Use" guidance for better discoverability.
+- Prepared the `v9.3.0` release notes in `CHANGELOG.md` and recorded the maintainer actions here before running the release flow.
+
+# Maintenance Walkthrough - 2026-03-29
+
+- Re-triaged the full 2026-03-15 security finding set against current `main` and wrote a fresh current-head report in `docs/maintainers/security-findings-triage-2026-03-29-refresh.md`.
+- Added a matching machine-readable export at `docs/maintainers/security-findings-triage-2026-03-29-refresh.csv` so the refreshed statuses are available in both markdown and CSV form.
+- Kept the old `2026-03-15` markdown/CSV as historical baseline input, preserved the smaller `2026-03-29` addendum as a transition note, and pointed both docs at the new refresh as the current source of truth.
+- The refreshed triage currently lands at:
+  - `0` findings still present and exploitable
+  - `0` findings still present but low practical risk
+  - `26` obsolete/not reproducible on current HEAD
+  - `7` duplicates
+- The refresh folds in the hardening shipped today and earlier in the session:
+  - symlink/path safety in maintainer/install/web copy flows
+  - frontmatter parser robustness
+  - removal of shared frontend star writes
+  - secure Office unpack behavior
+  - migration away from predictable `/tmp` state files
+
+- Fixed the remaining production/documentation drift introduced by the web-app and CI hardening work:
+  - clarified that the hosted GitHub Pages app runs in static public-catalog mode
+  - documented that `Sync Skills` is development-only unless explicitly enabled in local maintainer runs
+  - documented that web-app save/star interactions are intentionally browser-local today
+- Hardened the maintainer documentation so release and CI expectations now match the live workflows:
+  - release docs now mention the shared `tools/requirements.txt` install path, the web-app coverage gate, and blocking `npm audit --audit-level=high` on publish
+  - maintainer docs now document the narrow canonical-artifact auto-sync contract on `main`
+- Expanded the documented risk-maintenance workflow after the new automation landed:
+  - `audit:skills` exposes `suggested_risk`
+  - `sync:risk-labels` supports conservative high-confidence legacy cleanup
+  - offensive auto-promotions now also insert the canonical `AUTHORIZED USE ONLY` notice
+- Updated user-facing install docs to mention that the npm installer now uses a shallow clone for lighter first-run installs.
+- Updated the onboarding/trust docs to reflect the real `risk` taxonomy (`unknown`, `none`, `safe`, `critical`, `offensive`) instead of the older simplified wording.
+
+# Maintenance Walkthrough - 2026-03-25
+
+- Imported 14 skills from [Dimillian/Skills](https://github.com/Dimillian/Skills) into `skills/`:
+  - `app-store-changelog`
+  - `github`
+  - `ios-debugger-agent`
+  - `macos-menubar-tuist-app`
+  - `macos-spm-app-packaging`
+  - `orchestrate-batch-refactor`
+  - `project-skill-audit`
+  - `react-component-performance`
+  - `simplify-code`
+  - `swift-concurrency-expert`
+  - `swiftui-liquid-glass`
+  - `swiftui-performance-audit`
+  - `swiftui-ui-patterns`
+  - `swiftui-view-refactor`
+- Normalized the imported skill metadata to match repository validation requirements:
+  - shortened oversized frontmatter descriptions
+  - added `risk`, `source`, and `date_added`
+  - added `## When to Use` sections so the imported batch does not increase the warning budget
+- Added source attribution for `Dimillian/Skills` in:
+  - `README.md` under `Credits & Sources`
+  - `docs/sources/sources.md`
+- Merged PR `#395` via GitHub squash merge after maintainer refresh of forked workflow approvals and PR body normalization; this added the new `snowflake-development` skill.
+- Merged PR `#394` via GitHub squash merge after converting the contributor branch back to source-only, normalizing the PR checklist body, and shortening an oversized `wordpress-penetration-testing` description so CI passed.
+- Patched `skills/snowflake-development/SKILL.md` on `main` with a `## When to Use` section so the repository stayed within the frozen validation warning budget after the PR merge batch.
+- Reworked `/apply-optimize` automation to address GitHub code scanning alert `#36`: the public `issue_comment` trigger now only queues a trusted workflow, while the privileged branch checkout/apply logic runs in a separate `workflow_dispatch` path limited to same-repository branches.
+- Ran the required direct-`main` maintainer sync flow after touching `skills/`:
+  - `npm run chain`
+  - `npm run check:warning-budget`
+  - `npm run catalog`
+- Synced maintainer-owned generated artifacts and metadata to the new `1,325+` skill count:
+  - `README.md`
+  - `package.json`
+  - `skills_index.json`
+  - `CATALOG.md`
+  - `data/catalog.json`
+  - `data/bundles.json`
+  - curated user/maintainer docs updated by `sync_repo_metadata.py`
+
 # Maintenance Walkthrough - 2026-03-21
 
 - Imported and normalized a new batch of external skills into `skills/`, covering Anthropic Claude API/internal comms entries, marketing workflows, SEO orchestration/sub-skills, and Obsidian-focused file-format/CLI skills.

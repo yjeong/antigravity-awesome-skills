@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-02-08T00:00:00.000Z",
-  "total": 1311,
+  "total": 1340,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -311,6 +311,30 @@
         "cli"
       ],
       "path": "skills/address-github-comments/SKILL.md"
+    },
+    {
+      "id": "adhx",
+      "name": "adhx",
+      "description": "Fetch any X/Twitter post as clean LLM-friendly JSON. Converts x.com, twitter.com, or adhx.com links into structured data with full article content, author info, and engagement metrics. No scraping or browser required.",
+      "category": "data-ai",
+      "tags": [
+        "adhx"
+      ],
+      "triggers": [
+        "adhx",
+        "fetch",
+        "any",
+        "twitter",
+        "post",
+        "clean",
+        "llm",
+        "friendly",
+        "json",
+        "converts",
+        "com",
+        "links"
+      ],
+      "path": "skills/adhx/SKILL.md"
     },
     {
       "id": "advanced-evaluation",
@@ -1108,6 +1132,35 @@
         "fields"
       ],
       "path": "skills/airtable-automation/SKILL.md"
+    },
+    {
+      "id": "akf-trust-metadata",
+      "name": "akf-trust-metadata",
+      "description": "The AI native file format. EXIF for AI — stamps every file with trust scores, source provenance, and compliance metadata. Embeds into 20+ formats (DOCX, PDF, images, code). EU AI Act, SOX, HIPAA auditing.",
+      "category": "security",
+      "tags": [
+        "trust",
+        "metadata",
+        "provenance",
+        "compliance",
+        "file-format",
+        "ai-native"
+      ],
+      "triggers": [
+        "trust",
+        "metadata",
+        "provenance",
+        "compliance",
+        "file-format",
+        "ai-native",
+        "akf",
+        "ai",
+        "native",
+        "file",
+        "format",
+        "exif"
+      ],
+      "path": "skills/akf-trust-metadata/SKILL.md"
     },
     {
       "id": "algolia-search",
@@ -2238,6 +2291,32 @@
         "stacks"
       ],
       "path": "skills/app-builder/templates/SKILL.md"
+    },
+    {
+      "id": "app-store-changelog",
+      "name": "app-store-changelog",
+      "description": "Generate user-facing App Store release notes from git history since the last tag.",
+      "category": "general",
+      "tags": [
+        "app",
+        "store",
+        "changelog"
+      ],
+      "triggers": [
+        "app",
+        "store",
+        "changelog",
+        "generate",
+        "user",
+        "facing",
+        "release",
+        "notes",
+        "git",
+        "history",
+        "since",
+        "last"
+      ],
+      "path": "skills/app-store-changelog/SKILL.md"
     },
     {
       "id": "app-store-optimization",
@@ -7898,6 +7977,35 @@
         "qualified"
       ],
       "path": "skills/clarity-gate/SKILL.md"
+    },
+    {
+      "id": "clarvia-aeo-check",
+      "name": "clarvia-aeo-check",
+      "description": "Score any MCP server, API, or CLI for agent-readiness using Clarvia AEO (Agent Experience Optimization). Search 15,400+ indexed tools before adding them to your workflow.",
+      "category": "development",
+      "tags": [
+        "mcp",
+        "aeo",
+        "tool-quality",
+        "agent-readiness",
+        "api-scoring",
+        "clarvia"
+      ],
+      "triggers": [
+        "mcp",
+        "aeo",
+        "tool-quality",
+        "agent-readiness",
+        "api-scoring",
+        "clarvia",
+        "check",
+        "score",
+        "any",
+        "server",
+        "api",
+        "cli"
+      ],
+      "path": "skills/clarvia-aeo-check/SKILL.md"
     },
     {
       "id": "claude-ally-health",
@@ -14903,6 +15011,28 @@
       "path": "skills/git-pushing/SKILL.md"
     },
     {
+      "id": "github",
+      "name": "github",
+      "description": "Use the `gh` CLI for issues, pull requests, Actions runs, and GitHub API queries.",
+      "category": "development",
+      "tags": [
+        "github"
+      ],
+      "triggers": [
+        "github",
+        "gh",
+        "cli",
+        "issues",
+        "pull",
+        "requests",
+        "actions",
+        "runs",
+        "api",
+        "queries"
+      ],
+      "path": "skills/github/SKILL.md"
+    },
+    {
       "id": "github-actions-templates",
       "name": "github-actions-templates",
       "description": "Production-ready GitHub Actions workflow patterns for testing, building, and deploying applications.",
@@ -14948,7 +15078,7 @@
     {
       "id": "github-issue-creator",
       "name": "github-issue-creator",
-      "description": "Transform messy input (error logs, voice notes, screenshots) into clean, actionable GitHub issues.",
+      "description": "Turn error logs, screenshots, voice notes, and rough bug reports into crisp, developer-ready GitHub issues with repro steps, impact, and evidence.",
       "category": "general",
       "tags": [
         "github",
@@ -14959,15 +15089,15 @@
         "github",
         "issue",
         "creator",
-        "transform",
-        "messy",
-        "input",
+        "turn",
         "error",
         "logs",
+        "screenshots",
         "voice",
         "notes",
-        "screenshots",
-        "clean"
+        "rough",
+        "bug",
+        "reports"
       ],
       "path": "skills/github-issue-creator/SKILL.md"
     },
@@ -16149,7 +16279,7 @@
     {
       "id": "hugging-face-cli",
       "name": "hugging-face-cli",
-      "description": "The hf CLI provides direct terminal access to the Hugging Face Hub for downloading, uploading, and managing repositories, cache, and compute resources.",
+      "description": "Use the Hugging Face Hub CLI (`hf`) to download, upload, and manage models, datasets, and Spaces.",
       "category": "general",
       "tags": [
         "hugging",
@@ -16160,22 +16290,47 @@
         "hugging",
         "face",
         "cli",
-        "hf",
-        "provides",
-        "direct",
-        "terminal",
-        "access",
         "hub",
-        "downloading",
-        "uploading",
-        "managing"
+        "hf",
+        "download",
+        "upload",
+        "models",
+        "datasets",
+        "spaces"
       ],
       "path": "skills/hugging-face-cli/SKILL.md"
     },
     {
+      "id": "hugging-face-community-evals",
+      "name": "hugging-face-community-evals",
+      "description": "Run local evaluations for Hugging Face Hub models with inspect-ai or lighteval.",
+      "category": "data-ai",
+      "tags": [
+        "hugging",
+        "face",
+        "community",
+        "evals"
+      ],
+      "triggers": [
+        "hugging",
+        "face",
+        "community",
+        "evals",
+        "run",
+        "local",
+        "evaluations",
+        "hub",
+        "models",
+        "inspect",
+        "ai",
+        "lighteval"
+      ],
+      "path": "skills/hugging-face-community-evals/SKILL.md"
+    },
+    {
       "id": "hugging-face-dataset-viewer",
       "name": "hugging-face-dataset-viewer",
-      "description": "Use this skill for Hugging Face Dataset Viewer API workflows that fetch subset/split metadata, paginate rows, search text, apply filters, download parquet URLs, and read size or statistics.",
+      "description": "Query Hugging Face datasets through the Dataset Viewer API for splits, rows, search, filters, and parquet links.",
       "category": "development",
       "tags": [
         "hugging",
@@ -16188,14 +16343,14 @@
         "face",
         "dataset",
         "viewer",
-        "skill",
+        "query",
+        "datasets",
+        "through",
         "api",
-        "fetch",
-        "subset",
-        "split",
-        "metadata",
-        "paginate",
-        "rows"
+        "splits",
+        "rows",
+        "search",
+        "filters"
       ],
       "path": "skills/hugging-face-dataset-viewer/SKILL.md"
     },
@@ -16252,10 +16407,34 @@
       "path": "skills/hugging-face-evaluation/SKILL.md"
     },
     {
+      "id": "hugging-face-gradio",
+      "name": "hugging-face-gradio",
+      "description": "Build or edit Gradio apps, layouts, components, and chat interfaces in Python.",
+      "category": "development",
+      "tags": [
+        "hugging",
+        "face",
+        "gradio"
+      ],
+      "triggers": [
+        "hugging",
+        "face",
+        "gradio",
+        "edit",
+        "apps",
+        "layouts",
+        "components",
+        "chat",
+        "interfaces",
+        "python"
+      ],
+      "path": "skills/hugging-face-gradio/SKILL.md"
+    },
+    {
       "id": "hugging-face-jobs",
       "name": "hugging-face-jobs",
-      "description": "Run any workload on fully managed Hugging Face infrastructure. No local setup required—jobs run on cloud CPUs, GPUs, or TPUs and can persist results to the Hugging Face Hub.",
-      "category": "infrastructure",
+      "description": "Run workloads on Hugging Face Jobs with managed CPUs, GPUs, TPUs, secrets, and Hub persistence.",
+      "category": "security",
       "tags": [
         "hugging",
         "face",
@@ -16266,22 +16445,22 @@
         "face",
         "jobs",
         "run",
-        "any",
-        "workload",
-        "fully",
+        "workloads",
         "managed",
-        "infrastructure",
-        "no",
-        "local",
-        "setup"
+        "cpus",
+        "gpus",
+        "tpus",
+        "secrets",
+        "hub",
+        "persistence"
       ],
       "path": "skills/hugging-face-jobs/SKILL.md"
     },
     {
       "id": "hugging-face-model-trainer",
       "name": "hugging-face-model-trainer",
-      "description": "Train language models using TRL (Transformer Reinforcement Learning) on fully managed Hugging Face infrastructure. No local GPU setup required—models train on cloud GPUs and results are automatically saved to the Hugging Face Hub.",
-      "category": "infrastructure",
+      "description": "Train or fine-tune TRL language models on Hugging Face Jobs, including SFT, DPO, GRPO, and GGUF export.",
+      "category": "general",
       "tags": [
         "hugging",
         "face",
@@ -16294,13 +16473,13 @@
         "model",
         "trainer",
         "train",
+        "fine",
+        "tune",
+        "trl",
         "language",
         "models",
-        "trl",
-        "transformer",
-        "reinforcement",
-        "learning",
-        "fully"
+        "jobs",
+        "including"
       ],
       "path": "skills/hugging-face-model-trainer/SKILL.md"
     },
@@ -16332,6 +16511,31 @@
       "path": "skills/hugging-face-paper-publisher/SKILL.md"
     },
     {
+      "id": "hugging-face-papers",
+      "name": "hugging-face-papers",
+      "description": "Read and analyze Hugging Face paper pages or arXiv papers with markdown and papers API metadata.",
+      "category": "development",
+      "tags": [
+        "hugging",
+        "face",
+        "papers"
+      ],
+      "triggers": [
+        "hugging",
+        "face",
+        "papers",
+        "read",
+        "analyze",
+        "paper",
+        "pages",
+        "arxiv",
+        "markdown",
+        "api",
+        "metadata"
+      ],
+      "path": "skills/hugging-face-papers/SKILL.md"
+    },
+    {
       "id": "hugging-face-tool-builder",
       "name": "hugging-face-tool-builder",
       "description": "Your purpose is now is to create reusable command line scripts and utilities for using the Hugging Face API, allowing chaining, piping and intermediate processing where helpful. You can access the API directly, as well as use the hf command line tool.",
@@ -16356,6 +16560,59 @@
         "allowing"
       ],
       "path": "skills/hugging-face-tool-builder/SKILL.md"
+    },
+    {
+      "id": "hugging-face-trackio",
+      "name": "hugging-face-trackio",
+      "description": "Track ML experiments with Trackio using Python logging, alerts, and CLI metric retrieval.",
+      "category": "infrastructure",
+      "tags": [
+        "hugging",
+        "face",
+        "trackio"
+      ],
+      "triggers": [
+        "hugging",
+        "face",
+        "trackio",
+        "track",
+        "ml",
+        "experiments",
+        "python",
+        "logging",
+        "alerts",
+        "cli",
+        "metric",
+        "retrieval"
+      ],
+      "path": "skills/hugging-face-trackio/SKILL.md"
+    },
+    {
+      "id": "hugging-face-vision-trainer",
+      "name": "hugging-face-vision-trainer",
+      "description": "Train or fine-tune vision models on Hugging Face Jobs for detection, classification, and SAM or SAM2 segmentation.",
+      "category": "general",
+      "tags": [
+        "hugging",
+        "face",
+        "vision",
+        "trainer"
+      ],
+      "triggers": [
+        "hugging",
+        "face",
+        "vision",
+        "trainer",
+        "train",
+        "fine",
+        "tune",
+        "models",
+        "jobs",
+        "detection",
+        "classification",
+        "sam"
+      ],
+      "path": "skills/hugging-face-vision-trainer/SKILL.md"
     },
     {
       "id": "hybrid-cloud-architect",
@@ -16940,6 +17197,28 @@
       "path": "skills/inventory-demand-planning/SKILL.md"
     },
     {
+      "id": "ios-debugger-agent",
+      "name": "ios-debugger-agent",
+      "description": "Debug the current iOS project on a booted simulator with XcodeBuildMCP.",
+      "category": "development",
+      "tags": [
+        "ios",
+        "debugger",
+        "agent"
+      ],
+      "triggers": [
+        "ios",
+        "debugger",
+        "agent",
+        "debug",
+        "current",
+        "booted",
+        "simulator",
+        "xcodebuildmcp"
+      ],
+      "path": "skills/ios-debugger-agent/SKILL.md"
+    },
+    {
       "id": "ios-developer",
       "name": "ios-developer",
       "description": "Develop native iOS applications with Swift/SwiftUI. Masters iOS 18, SwiftUI, UIKit integration, Core Data, networking, and App Store optimization.",
@@ -17186,6 +17465,35 @@
         "intelligence"
       ],
       "path": "skills/jobgpt/SKILL.md"
+    },
+    {
+      "id": "jq",
+      "name": "jq",
+      "description": "Expert jq usage for JSON querying, filtering, transformation, and pipeline integration. Practical patterns for real shell workflows.",
+      "category": "infrastructure",
+      "tags": [
+        "jq",
+        "json",
+        "shell",
+        "cli",
+        "data-transformation",
+        "bash"
+      ],
+      "triggers": [
+        "jq",
+        "json",
+        "shell",
+        "cli",
+        "data-transformation",
+        "bash",
+        "usage",
+        "querying",
+        "filtering",
+        "transformation",
+        "pipeline",
+        "integration"
+      ],
+      "path": "skills/jq/SKILL.md"
     },
     {
       "id": "json-canvas",
@@ -18799,6 +19107,55 @@
         "arguments"
       ],
       "path": "skills/machine-learning-ops-ml-pipeline/SKILL.md"
+    },
+    {
+      "id": "macos-menubar-tuist-app",
+      "name": "macos-menubar-tuist-app",
+      "description": "Build, refactor, or review SwiftUI macOS menubar apps that use Tuist.",
+      "category": "general",
+      "tags": [
+        "macos",
+        "menubar",
+        "tuist",
+        "app"
+      ],
+      "triggers": [
+        "macos",
+        "menubar",
+        "tuist",
+        "app",
+        "refactor",
+        "review",
+        "swiftui",
+        "apps"
+      ],
+      "path": "skills/macos-menubar-tuist-app/SKILL.md"
+    },
+    {
+      "id": "macos-spm-app-packaging",
+      "name": "macos-spm-app-packaging",
+      "description": "Scaffold, build, sign, and package SwiftPM macOS apps without Xcode projects.",
+      "category": "general",
+      "tags": [
+        "macos",
+        "spm",
+        "app",
+        "packaging"
+      ],
+      "triggers": [
+        "macos",
+        "spm",
+        "app",
+        "packaging",
+        "scaffold",
+        "sign",
+        "package",
+        "swiftpm",
+        "apps",
+        "without",
+        "xcode"
+      ],
+      "path": "skills/macos-spm-app-packaging/SKILL.md"
     },
     {
       "id": "magic-animator",
@@ -21938,6 +22295,32 @@
       "path": "skills/oral-health-analyzer/SKILL.md"
     },
     {
+      "id": "orchestrate-batch-refactor",
+      "name": "orchestrate-batch-refactor",
+      "description": "Plan and execute large refactors with dependency-aware work packets and parallel analysis.",
+      "category": "general",
+      "tags": [
+        "orchestrate",
+        "batch",
+        "refactor"
+      ],
+      "triggers": [
+        "orchestrate",
+        "batch",
+        "refactor",
+        "plan",
+        "execute",
+        "large",
+        "refactors",
+        "dependency",
+        "aware",
+        "work",
+        "packets",
+        "parallel"
+      ],
+      "path": "skills/orchestrate-batch-refactor/SKILL.md"
+    },
+    {
       "id": "os-scripting",
       "name": "os-scripting",
       "description": "Operating system and shell scripting troubleshooting workflow for Linux, macOS, and Windows. Covers bash scripting, system administration, debugging, and automation.",
@@ -22464,6 +22847,32 @@
         "others"
       ],
       "path": "skills/personal-tool-builder/SKILL.md"
+    },
+    {
+      "id": "phase-gated-debugging",
+      "name": "phase-gated-debugging",
+      "description": "Use when debugging any bug. Enforces a 5-phase protocol where code edits are blocked until root cause is confirmed. Prevents premature fix attempts.",
+      "category": "general",
+      "tags": [
+        "phase",
+        "gated",
+        "debugging"
+      ],
+      "triggers": [
+        "phase",
+        "gated",
+        "debugging",
+        "any",
+        "bug",
+        "enforces",
+        "protocol",
+        "where",
+        "code",
+        "edits",
+        "blocked",
+        "until"
+      ],
+      "path": "skills/phase-gated-debugging/SKILL.md"
     },
     {
       "id": "php-pro",
@@ -23403,6 +23812,27 @@
       "path": "skills/project-development/SKILL.md"
     },
     {
+      "id": "project-skill-audit",
+      "name": "project-skill-audit",
+      "description": "Audit a project and recommend the highest-value skills to add or update.",
+      "category": "general",
+      "tags": [
+        "skill",
+        "audit"
+      ],
+      "triggers": [
+        "skill",
+        "audit",
+        "recommend",
+        "highest",
+        "value",
+        "skills",
+        "add",
+        "update"
+      ],
+      "path": "skills/project-skill-audit/SKILL.md"
+    },
+    {
       "id": "projection-patterns",
       "name": "projection-patterns",
       "description": "Build read models and projections from event streams. Use when implementing CQRS read sides, building materialized views, or optimizing query performance in event-sourced systems.",
@@ -24033,6 +24463,29 @@
         "new"
       ],
       "path": "skills/react-best-practices/SKILL.md"
+    },
+    {
+      "id": "react-component-performance",
+      "name": "react-component-performance",
+      "description": "Diagnose slow React components and suggest targeted performance fixes.",
+      "category": "development",
+      "tags": [
+        "react",
+        "component",
+        "performance"
+      ],
+      "triggers": [
+        "react",
+        "component",
+        "performance",
+        "diagnose",
+        "slow",
+        "components",
+        "suggest",
+        "targeted",
+        "fixes"
+      ],
+      "path": "skills/react-component-performance/SKILL.md"
     },
     {
       "id": "react-flow-architect",
@@ -24855,6 +25308,34 @@
         "programming"
       ],
       "path": "skills/rust-pro/SKILL.md"
+    },
+    {
+      "id": "saas-multi-tenant",
+      "name": "saas-multi-tenant",
+      "description": "Design and implement multi-tenant SaaS architectures with row-level security, tenant-scoped queries, shared-schema isolation, and safe cross-tenant admin patterns in PostgreSQL and TypeScript.",
+      "category": "security",
+      "tags": [
+        "multi-tenancy",
+        "saas",
+        "row-level-security",
+        "postgresql",
+        "tenant-isolation"
+      ],
+      "triggers": [
+        "multi-tenancy",
+        "saas",
+        "row-level-security",
+        "postgresql",
+        "tenant-isolation",
+        "multi",
+        "tenant",
+        "architectures",
+        "row",
+        "level",
+        "security",
+        "scoped"
+      ],
+      "path": "skills/saas-multi-tenant/SKILL.md"
     },
     {
       "id": "saas-mvp-launcher",
@@ -26913,6 +27394,31 @@
       "path": "skills/similarity-search-patterns/SKILL.md"
     },
     {
+      "id": "simplify-code",
+      "name": "simplify-code",
+      "description": "Review a diff for clarity and safe simplifications, then optionally apply low-risk fixes.",
+      "category": "security",
+      "tags": [
+        "simplify",
+        "code"
+      ],
+      "triggers": [
+        "simplify",
+        "code",
+        "review",
+        "diff",
+        "clarity",
+        "safe",
+        "simplifications",
+        "then",
+        "optionally",
+        "apply",
+        "low",
+        "risk"
+      ],
+      "path": "skills/simplify-code/SKILL.md"
+    },
+    {
       "id": "site-architecture",
       "name": "site-architecture",
       "description": "Plan or restructure website hierarchy, navigation, URL patterns, breadcrumbs, and internal linking. Use when mapping pages, sections, and site structure, but not for XML sitemap auditing or schema markup.",
@@ -27403,6 +27909,30 @@
         "identify"
       ],
       "path": "skills/smtp-penetration-testing/SKILL.md"
+    },
+    {
+      "id": "snowflake-development",
+      "name": "snowflake-development",
+      "description": "Comprehensive Snowflake development assistant covering SQL best practices, data pipeline design (Dynamic Tables, Streams, Tasks, Snowpipe), Cortex AI functions, Cortex Agents, Snowpark Python, dbt integration, performance tuning, and security hardening.",
+      "category": "security",
+      "tags": [
+        "snowflake"
+      ],
+      "triggers": [
+        "snowflake",
+        "development",
+        "assistant",
+        "covering",
+        "sql",
+        "data",
+        "pipeline",
+        "dynamic",
+        "tables",
+        "streams",
+        "tasks",
+        "snowpipe"
+      ],
+      "path": "skills/snowflake-development/SKILL.md"
     },
     {
       "id": "social-content",
@@ -28286,6 +28816,29 @@
       "path": "skills/sveltekit/SKILL.md"
     },
     {
+      "id": "swift-concurrency-expert",
+      "name": "swift-concurrency-expert",
+      "description": "Review and fix Swift concurrency issues such as actor isolation and Sendable violations.",
+      "category": "general",
+      "tags": [
+        "swift",
+        "concurrency"
+      ],
+      "triggers": [
+        "swift",
+        "concurrency",
+        "review",
+        "fix",
+        "issues",
+        "such",
+        "actor",
+        "isolation",
+        "sendable",
+        "violations"
+      ],
+      "path": "skills/swift-concurrency-expert/SKILL.md"
+    },
+    {
       "id": "swiftui-expert-skill",
       "name": "swiftui-expert-skill",
       "description": "Write, review, or improve SwiftUI code following best practices for state management, view composition, performance, and iOS 26+ Liquid Glass adoption. Use when building new SwiftUI features, refactoring existing views, reviewing code quality, or adopting modern SwiftUI patterns.",
@@ -28309,6 +28862,98 @@
         "ios"
       ],
       "path": "skills/swiftui-expert-skill/SKILL.md"
+    },
+    {
+      "id": "swiftui-liquid-glass",
+      "name": "swiftui-liquid-glass",
+      "description": "Implement or review SwiftUI Liquid Glass APIs with correct fallbacks and modifier order.",
+      "category": "general",
+      "tags": [
+        "swiftui",
+        "liquid",
+        "glass"
+      ],
+      "triggers": [
+        "swiftui",
+        "liquid",
+        "glass",
+        "review",
+        "apis",
+        "correct",
+        "fallbacks",
+        "modifier",
+        "order"
+      ],
+      "path": "skills/swiftui-liquid-glass/SKILL.md"
+    },
+    {
+      "id": "swiftui-performance-audit",
+      "name": "swiftui-performance-audit",
+      "description": "Audit SwiftUI performance issues from code review and profiling evidence.",
+      "category": "general",
+      "tags": [
+        "swiftui",
+        "performance",
+        "audit"
+      ],
+      "triggers": [
+        "swiftui",
+        "performance",
+        "audit",
+        "issues",
+        "code",
+        "review",
+        "profiling",
+        "evidence"
+      ],
+      "path": "skills/swiftui-performance-audit/SKILL.md"
+    },
+    {
+      "id": "swiftui-ui-patterns",
+      "name": "swiftui-ui-patterns",
+      "description": "Apply proven SwiftUI UI patterns for navigation, sheets, async state, and reusable screens.",
+      "category": "architecture",
+      "tags": [
+        "swiftui",
+        "ui"
+      ],
+      "triggers": [
+        "swiftui",
+        "ui",
+        "apply",
+        "proven",
+        "navigation",
+        "sheets",
+        "async",
+        "state",
+        "reusable",
+        "screens"
+      ],
+      "path": "skills/swiftui-ui-patterns/SKILL.md"
+    },
+    {
+      "id": "swiftui-view-refactor",
+      "name": "swiftui-view-refactor",
+      "description": "Refactor SwiftUI views into smaller components with stable, explicit data flow.",
+      "category": "data-ai",
+      "tags": [
+        "swiftui",
+        "view",
+        "refactor"
+      ],
+      "triggers": [
+        "swiftui",
+        "view",
+        "refactor",
+        "views",
+        "smaller",
+        "components",
+        "stable",
+        "explicit",
+        "data",
+        "flow"
+      ],
+      "path": "skills/swiftui-view-refactor/SKILL.md"
     },
     {
       "id": "sympy",
@@ -29495,6 +30140,36 @@
       "path": "skills/tiktok-automation/SKILL.md"
     },
     {
+      "id": "tmux",
+      "name": "tmux",
+      "description": "Expert tmux session, window, and pane management for terminal multiplexing, persistent remote workflows, and shell scripting automation.",
+      "category": "workflow",
+      "tags": [
+        "tmux",
+        "terminal",
+        "multiplexer",
+        "sessions",
+        "shell",
+        "remote",
+        "automation"
+      ],
+      "triggers": [
+        "tmux",
+        "terminal",
+        "multiplexer",
+        "sessions",
+        "shell",
+        "remote",
+        "automation",
+        "session",
+        "window",
+        "pane",
+        "multiplexing",
+        "persistent"
+      ],
+      "path": "skills/tmux/SKILL.md"
+    },
+    {
       "id": "todoist-automation",
       "name": "todoist-automation",
       "description": "Automate Todoist task management, projects, sections, filtering, and bulk operations via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -29618,6 +30293,29 @@
         "bugs"
       ],
       "path": "skills/track-management/SKILL.md"
+    },
+    {
+      "id": "transformers-js",
+      "name": "transformers-js",
+      "description": "Run Hugging Face models in JavaScript or TypeScript with Transformers.js in Node.js or the browser.",
+      "category": "development",
+      "tags": [
+        "transformers",
+        "js"
+      ],
+      "triggers": [
+        "transformers",
+        "js",
+        "run",
+        "hugging",
+        "face",
+        "models",
+        "javascript",
+        "typescript",
+        "node",
+        "browser"
+      ],
+      "path": "skills/transformers-js/SKILL.md"
     },
     {
       "id": "travel-health-analyzer",
@@ -30618,6 +31316,34 @@
       "path": "skills/vibers-code-review/SKILL.md"
     },
     {
+      "id": "viboscope",
+      "name": "viboscope",
+      "description": "Psychological compatibility matching — find cofounders, collaborators, and friends through validated psychometrics",
+      "category": "workflow",
+      "tags": [
+        "matching",
+        "psychology",
+        "compatibility",
+        "networking",
+        "collaboration"
+      ],
+      "triggers": [
+        "matching",
+        "psychology",
+        "compatibility",
+        "networking",
+        "collaboration",
+        "viboscope",
+        "psychological",
+        "find",
+        "cofounders",
+        "collaborators",
+        "friends",
+        "through"
+      ],
+      "path": "skills/viboscope/SKILL.md"
+    },
+    {
       "id": "videodb",
       "name": "videodb",
       "description": "Video and audio perception, indexing, and editing. Ingest files/URLs/live streams, build visual/spoken indexes, search with timestamps, edit timelines, add overlays/subtitles, generate media, and create real-time alerts.",
@@ -31405,7 +32131,7 @@
     {
       "id": "wordpress",
       "name": "wordpress",
-      "description": "Complete WordPress development workflow covering theme development, plugin creation, WooCommerce integration, performance optimization, and security hardening.",
+      "description": "Complete WordPress development workflow covering theme development, plugin creation, WooCommerce integration, performance optimization, and security hardening. Includes WordPress 7.0 features: Real-Time Collaboration, AI Connectors, Abilities API, DataViews, and PHP-only blocks.",
       "category": "security",
       "tags": [
         "wordpress"
@@ -31429,7 +32155,7 @@
     {
       "id": "wordpress-penetration-testing",
       "name": "wordpress-penetration-testing",
-      "description": "Conduct comprehensive security assessments of WordPress installations including enumeration of users, themes, and plugins, vulnerability scanning, credential attacks, and exploitation techniques. WordPress powers approximately 35% of websites, making it a critical target for security testing.",
+      "description": "Assess WordPress installations for common vulnerabilities and WordPress 7.0 attack surfaces.",
       "category": "security",
       "tags": [
         "wordpress",
@@ -31439,22 +32165,19 @@
         "wordpress",
         "penetration",
         "testing",
-        "conduct",
-        "security",
-        "assessments",
+        "assess",
         "installations",
-        "including",
-        "enumeration",
-        "users",
-        "themes",
-        "plugins"
+        "common",
+        "vulnerabilities",
+        "attack",
+        "surfaces"
       ],
       "path": "skills/wordpress-penetration-testing/SKILL.md"
     },
     {
       "id": "wordpress-plugin-development",
       "name": "wordpress-plugin-development",
-      "description": "WordPress plugin development workflow covering plugin architecture, hooks, admin interfaces, REST API, and security best practices.",
+      "description": "WordPress plugin development workflow covering plugin architecture, hooks, admin interfaces, REST API, security best practices, and WordPress 7.0 features: Real-Time Collaboration, AI Connectors, Abilities API, DataViews, and PHP-only blocks.",
       "category": "security",
       "tags": [
         "wordpress",
@@ -31471,14 +32194,15 @@
         "interfaces",
         "rest",
         "api",
-        "security"
+        "security",
+        "features"
       ],
       "path": "skills/wordpress-plugin-development/SKILL.md"
     },
     {
       "id": "wordpress-theme-development",
       "name": "wordpress-theme-development",
-      "description": "WordPress theme development workflow covering theme architecture, template hierarchy, custom post types, block editor support, and responsive design.",
+      "description": "WordPress theme development workflow covering theme architecture, template hierarchy, custom post types, block editor support, responsive design, and WordPress 7.0 features: DataViews, Pattern Editing, Navigation Overlays, and admin refresh.",
       "category": "architecture",
       "tags": [
         "wordpress",
@@ -31503,8 +32227,8 @@
     {
       "id": "wordpress-woocommerce-development",
       "name": "wordpress-woocommerce-development",
-      "description": "WooCommerce store development workflow covering store setup, payment integration, shipping configuration, and customization.",
-      "category": "workflow",
+      "description": "WooCommerce store development workflow covering store setup, payment integration, shipping configuration, customization, and WordPress 7.0 features: AI connectors, DataViews, and collaboration tools.",
+      "category": "data-ai",
       "tags": [
         "wordpress",
         "woocommerce"
@@ -31520,7 +32244,8 @@
         "integration",
         "shipping",
         "configuration",
-        "customization"
+        "customization",
+        "features"
       ],
       "path": "skills/wordpress-woocommerce-development/SKILL.md"
     },

@@ -17,6 +17,8 @@ Skills are specialized instruction files that teach AI assistants how to handle 
 It's like having a library - all books are there, but you only read the ones you need.
 **Pro Tip:** Use [Starter Packs](bundles.md) to focus on the skills that match your role first.
 
+If you want a narrower install surface for **Claude Code** or **Codex**, use the new plugin distributions documented in [plugins.md](plugins.md) instead of the full library install.
+
 ### What is the difference between Bundles and Workflows?
 
 - **Bundles** are curated recommendations grouped by role or domain.
@@ -28,6 +30,15 @@ Start from:
 
 - [bundles.md](bundles.md)
 - [workflows.md](workflows.md)
+
+### What is the difference between skills and MCP tools?
+
+- **Skills** are reusable `SKILL.md` playbooks that guide an AI assistant through a workflow.
+- **MCP tools** are integrations or callable capabilities that let the assistant interact with external systems.
+
+Use skills when you want better process, structure, and execution quality. Use MCP tools when you need access to APIs, services, databases, or other systems. Use both when you want reliable workflows plus external capabilities.
+
+For the longer explanation, read [skills-vs-mcp-tools.md](skills-vs-mcp-tools.md).
 
 ### Which AI tools work with these skills?
 
@@ -69,6 +80,13 @@ For a concrete example (including pseudo‑code) see:
 ### Do skills work offline?
 
 The skill files themselves are stored locally on your computer, but your AI assistant needs an internet connection to function.
+
+### Does the hosted web app write anything back to the repository?
+
+No. The public site is a static GitHub Pages deploy.
+
+- The maintainer `Sync Skills` flow is local-development only and is not a public production endpoint.
+- Browser save/star interactions are intentionally local-first for now. Until the project has a real backend contract, treat them as browser-local state rather than shared repository writes.
 
 ---
 
@@ -112,6 +130,8 @@ If you get a 404 from npm, use: `npx github:sickn33/antigravity-awesome-skills`
 git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
 ```
 
+The installer CLI is the recommended path for most users because it performs a lighter shallow clone of the current library. Manual `git clone` is still the right option when you want the full repository history or plan to contribute from the same checkout.
+
 **Tool-specific paths:**
 
 - Claude Code: `.claude/skills/`
@@ -127,6 +147,49 @@ git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skill
 ```
 
 This repository now includes `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` so Claude Code can install the same skill tree through the plugin marketplace.
+
+**Codex plugin alternative:**
+
+This repository also includes repo-local plugin metadata for Codex:
+
+- `.agents/plugins/marketplace.json`
+- `plugins/antigravity-awesome-skills/.codex-plugin/plugin.json`
+
+That path exposes the new plugin-safe Codex root plugin plus generated bundle plugins. For the full explanation, read [plugins.md](plugins.md).
+
+### Why do I not see `Sync Skills` on the hosted website?
+
+Because the public site is a static GitHub Pages catalog, not a maintainer control surface.
+
+`Sync Skills` is only meant for local maintainer/development runs behind the Vite dev server, and it stays hidden unless the local environment explicitly enables it.
+
+### What does `Public catalog mode` mean?
+
+It means you are looking at the published static catalog build.
+
+In that mode:
+
+- catalog browsing and skill detail pages work normally
+- dev-only `/api/refresh-skills` behavior is not available
+- anything that would require a backend or mutable server state is intentionally disabled or reduced to local-only behavior
+
+### Are saves/stars global or just local?
+
+Right now they are local to your browser.
+
+The app may show optional read-only community counts when configured, but clicking save/star does not create a shared server-side vote. Until the project ships a real backend write contract with abuse controls, treat saves as a personal local bookmark signal.
+
+### What does `plugin-safe` mean?
+
+Plugin-safe means the published Claude Code and Codex plugins only include the subset of skills that is ready for marketplace-style distribution.
+
+Skills can stay repo-only for a while if they still need:
+
+- portability cleanup
+- explicit setup metadata
+- additional hardening for plugin ecosystems
+
+So it is normal for the **full library** to be larger than the **plugin-safe** plugin subset. The repository stays the complete source of truth; plugins publish the hardened subset.
 
 ### Does this work with Windows?
 
@@ -162,6 +225,26 @@ If Antigravity becomes unstable only when the full skills library is active, swi
 
 That guide shows how to run `scripts/activate-skills.sh` from a cloned copy of this repository so only the bundles or skill ids you need stay active in `~/.gemini/antigravity/skills`.
 
+### Gemini CLI hangs after a few turns or says "This is taking a bit longer, we're still on it". What should I do?
+
+Start with a quick isolation check:
+
+1. Start a brand-new Gemini CLI conversation.
+2. Try one prompt with no skills at all.
+3. Try the same task again with only one small skill such as `brainstorming`.
+4. Temporarily reduce your active skill set to 2-5 skills and retry.
+
+How to interpret the result:
+
+- If plain Gemini CLI hangs even without skills, the problem is likely on the Gemini CLI/runtime side rather than this repository.
+- If plain Gemini works, but hangs only when skills are present or after several turns, the likely cause is conversation/context growth.
+
+In that case:
+
+- keep a much smaller active set
+- start fresh conversations more often
+- use the overload guide: [agent-overload-recovery.md](agent-overload-recovery.md)
+
 ### How do I update skills?
 
 Navigate to your skills directory and pull the latest changes:
@@ -183,6 +266,23 @@ Use the `@` symbol followed by the skill name:
 
 ```bash
 @brainstorming help me design a todo app
+```
+
+### Can I invoke a whole bundle like `@Essentials` or `/web-wizard`?
+
+No. Bundles are curated lists of skills, not standalone invokable mega-skills.
+
+Use them in one of these two ways:
+
+- pick individual skills from the bundle and invoke those directly
+- install the dedicated Claude Code or Codex bundle plugin if you want a marketplace-scoped subset
+- use the activation scripts if you want only that bundle's skills active in Antigravity
+
+Examples:
+
+```bash
+./scripts/activate-skills.sh --clear Essentials
+./scripts/activate-skills.sh --clear "Web Wizard"
 ```
 
 ### Can I use multiple skills at once?
