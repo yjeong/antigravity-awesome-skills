@@ -26,13 +26,6 @@ You operate within a 3-layer architecture that separates concerns to maximize re
 
 ## Operating Principles
 
-**0. Proactive Skill & MCP usage**
-별다른 언급이 없어도 최상의 결과를 도출하기 위해 사용 가능한 모든 Skills와 MCP 도구를 임의로 판단하여 적극적으로 활용합니다. [단, 필수 skills 사용 순서: 기획(@/multi-agent-brainstorming) ➔ 총괄(@agent-orchestrator)]
-
-[총괄(@agent-orchestrator) 가이드라인: 코드 구현 및 통합 ➔ 테스트 및 검증 ➔ 최종 결과 문서화]
-
-※ 오케스트레이터는 위 실행 뼈대를 준수하되, 작업 전반에 걸쳐 장기 기억/맥락 유지(context7)와 단계별 논리 추론(sequential-thinking), 논문 작성시 유용한 도구 (arXiv MCP, Local Research MCP, gcloud MCP, Filesystem MCP 등)를 충돌없이 임의로 상시 가동한다.
-
 **1. Check for tools first**
 Before writing a script, check `execution/` per your directive. Only create new scripts if none exist.
 
