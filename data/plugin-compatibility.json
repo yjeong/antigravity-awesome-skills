@@ -11897,6 +11897,25 @@
       "runtime_files": []
     },
     {
+      "id": "global-chat-agent-discovery",
+      "path": "skills/global-chat-agent-discovery",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "gmail-automation",
       "path": "skills/gmail-automation",
       "targets": {
@@ -16217,6 +16236,25 @@
       "runtime_files": []
     },
     {
+      "id": "multi-agent-task-orchestrator",
+      "path": "skills/multi-agent-task-orchestrator",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "multi-cloud-architecture",
       "path": "skills/multi-cloud-architecture",
       "targets": {
@@ -18969,6 +19007,25 @@
       "runtime_files": []
     },
     {
+      "id": "protect-mcp-governance",
+      "path": "skills/protect-mcp-governance",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "protocol-reverse-engineering",
       "path": "skills/protocol-reverse-engineering",
       "targets": {
@@ -19142,6 +19199,25 @@
     {
       "id": "python-performance-optimization",
       "path": "skills/python-performance-optimization",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "python-pptx-generator",
+      "path": "skills/python-pptx-generator",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -23426,6 +23502,25 @@
       "runtime_files": []
     },
     {
+      "id": "technical-change-tracker",
+      "path": "skills/technical-change-tracker",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "telegram",
       "path": "skills/telegram",
       "targets": {
@@ -26230,10 +26325,10 @@
     }
   ],
   "summary": {
-    "total_skills": 1372,
+    "total_skills": 1377,
     "supported": {
-      "codex": 1343,
-      "claude": 1358
+      "codex": 1348,
+      "claude": 1363
     },
     "blocked": {
       "codex": 29,
