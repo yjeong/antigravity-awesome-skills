@@ -10054,6 +10054,44 @@
       "runtime_files": []
     },
     {
+      "id": "faf-expert",
+      "path": "skills/faf-expert",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "faf-wizard",
+      "path": "skills/faf-wizard",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "fal-audio",
       "path": "skills/fal-audio",
       "targets": {
@@ -13157,6 +13195,25 @@
     {
       "id": "iconsax-library",
       "path": "skills/iconsax-library",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "idea-darwin",
+      "path": "skills/idea-darwin",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -20261,6 +20318,25 @@
       "runtime_files": []
     },
     {
+      "id": "satori",
+      "path": "skills/satori",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "scala-pro",
       "path": "skills/scala-pro",
       "targets": {
@@ -26325,10 +26401,10 @@
     }
   ],
   "summary": {
-    "total_skills": 1377,
+    "total_skills": 1381,
     "supported": {
-      "codex": 1348,
-      "claude": 1363
+      "codex": 1352,
+      "claude": 1367
     },
     "blocked": {
       "codex": 29,
