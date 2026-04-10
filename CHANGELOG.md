@@ -9,6 +9,90 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [9.11.0] - 2026-04-09 - "Monte Carlo Skills and Cross-Tool Skill Management"
+
+> Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
+
+Start here:
+
+- Install: `npx antigravity-awesome-skills`
+- Choose your tool: [README -> Choose Your Tool](https://github.com/sickn33/antigravity-awesome-skills#choose-your-tool)
+- Best skills by tool: [README -> Best Skills By Tool](https://github.com/sickn33/antigravity-awesome-skills#best-skills-by-tool)
+- Bundles: [docs/users/bundles.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md)
+- Workflows: [docs/users/workflows.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md)
+
+This release merges PR #481 and PR #482 to expand the library in two directions: data observability workflows for Monte Carlo users and cross-tool skill maintenance guidance for teams operating across multiple agent coding environments. It also carries the required maintainer follow-up on `main`, including contributor syncing, README source-credit coverage, and canonical post-merge repository hygiene before the release cut.
+
+## New Skills
+
+- **monte-carlo-prevent** - checks table health, alerts, lineage, and blast radius before SQL or dbt edits.
+- **monte-carlo-monitor-creation** - guides monitor creation through the Monte Carlo MCP server and outputs monitors-as-code YAML.
+- **monte-carlo-push-ingestion** - documents metadata, lineage, and query-log ingestion into Monte Carlo across multiple warehouse patterns.
+- **monte-carlo-validation-notebook** - generates SQL validation notebook workflows for dbt pull request changes with before/after comparisons.
+- **manage-skills** - teaches agents how to discover, create, edit, toggle, copy, move, and delete skills across 11 major coding-agent tools.
+
+## Improvements
+
+- **README source-credit coverage** - keeps `monte-carlo-data/mc-agent-toolkit` and `umutbozdag/agent-skills-manager` reflected in community-source credits on `main`.
+- **Maintainer merge hygiene** - records the GitHub-only squash merge path, contributor sync, PR metadata refresh, and post-merge repository-state follow-up used for these community contributions.
+
+## Who should care
+
+- **Monte Carlo and dbt users** get a focused set of observability skills for impact analysis, monitor setup, ingestion pipelines, and validation-notebook workflows.
+- **Claude Code, Cursor, Codex CLI, Gemini CLI, and other agent-tool users** get one portable skill for managing skill inventories across mixed toolchains instead of maintaining separate ad hoc instructions per tool.
+- **Maintainers and source curators** get the merged upstream attribution and contributor credit trail captured cleanly in both the README and release notes.
+
+## Credits
+
+- **[@cryptoque](https://github.com/cryptoque)** for the Monte Carlo contribution merged in PR #481.
+- **[@umutbozdag](https://github.com/umutbozdag)** for the `manage-skills` contribution merged in PR #482.
+- **[monte-carlo-data/mc-agent-toolkit](https://github.com/monte-carlo-data/mc-agent-toolkit)** for the upstream Monte Carlo skill source material.
+- **[umutbozdag/agent-skills-manager](https://github.com/umutbozdag/agent-skills-manager)** for the upstream cross-tool skill-management source material.
+
+## [9.10.0] - 2026-04-08 - "StyleSeed UI and UX Pack"
+
+> Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
+
+Start here:
+
+- Install: `npx antigravity-awesome-skills`
+- Choose your tool: [README -> Choose Your Tool](https://github.com/sickn33/antigravity-awesome-skills#choose-your-tool)
+- Best skills by tool: [README -> Best Skills By Tool](https://github.com/sickn33/antigravity-awesome-skills#best-skills-by-tool)
+- Bundles: [docs/users/bundles.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md)
+- Workflows: [docs/users/workflows.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md)
+
+This release merges PR #479 to add an 11-skill StyleSeed-derived UI and UX pack sourced from `bitjaru/styleseed`. It expands the library with design-aware setup, component and page scaffolding, token management, accessibility review, UX audit flows, and feedback-state guidance, then carries the required README source-credit and maintainer follow-up state on `main`.
+
+## New Skills
+
+- **ui-setup** - interactive design-setup guidance for color, typography, and concept selection before generating the first page.
+- **ui-component** - component generation patterns aligned with shared design rules and visual consistency constraints.
+- **ui-page** - mobile-first page scaffolding guidance for layout structure, content hierarchy, and section composition.
+- **ui-pattern** - reusable UI pattern composition for grids, tables, cards, and similar building blocks.
+- **ui-review** - design-system review guidance for catching inconsistent spacing, typography, and component usage.
+- **ui-tokens** - design-token management guidance for evolving colors, type, spacing, and semantic system values.
+- **ui-a11y** - WCAG 2.2 AA-oriented accessibility review patterns for UI implementation.
+- **ux-flow** - user-flow design guidance for progressive disclosure and information architecture decisions.
+- **ux-audit** - heuristic UX audit workflow based on Nielsen-style evaluation criteria.
+- **ux-copy** - UX microcopy guidance for controls, errors, empty states, and concise interface text.
+- **ux-feedback** - loading, empty, error, and success-state guidance for resilient UI behavior.
+
+## Improvements
+
+- **README source-credit coverage** - keeps `bitjaru/styleseed` credited under community contributors so the merged source metadata and public acknowledgements stay aligned.
+- **Maintainer post-merge hygiene** - records the GitHub-only squash merge path for issue #478 / PR #479 and keeps `main` ready for the release cut immediately after merge.
+
+## Who should care
+
+- **Design-aware frontend builders** get a focused pack for turning UI prompts into more coherent setup, page, component, and pattern guidance.
+- **Teams improving UX quality** get new skills for accessibility review, heuristic audits, flows, microcopy, and feedback states.
+- **Maintainers and source curators** get the merged upstream attribution reflected cleanly in both the README and release trail.
+
+## Credits
+
+- **[@bitjaru](https://github.com/bitjaru)** for opening issue #478 and surfacing the StyleSeed skill pack request.
+- **[bitjaru/styleseed](https://github.com/bitjaru/styleseed)** for the upstream StyleSeed source material reflected in this release.
+
 ## [9.9.0] - 2026-04-07 - "Vibeship Restore and Community Merge Batch"
 
 > Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
