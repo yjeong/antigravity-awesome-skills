@@ -47,6 +47,8 @@ name: my-skill-name
 description: "Brief description of what this skill does"
 risk: safe
 source: community
+source_repo: owner/repo
+source_type: community
 ---
 ```
 
@@ -81,6 +83,18 @@ source: community
 - **Examples:** `source: community`, `source: "https://example.com/original"`
 - **Use `"self"`** if you are the original author
 
+#### `source_repo`
+- **What it is:** Canonical GitHub repository identifier for external upstream material
+- **Format:** `OWNER/REPO`
+- **Example:** `source_repo: Dimillian/Skills`
+- **When required:** Use it when the skill adapts or imports material from an external GitHub repository
+
+#### `source_type`
+- **What it is:** Which README credits bucket the upstream repo belongs to
+- **Values:** `official` | `community` | `self`
+- **Examples:** `source_type: official`, `source_type: community`
+- **Rule:** `self` means no external README repo credit is required
+
 ### Optional Fields
 
 Some skills include additional metadata:
@@ -91,11 +105,33 @@ name: my-skill-name
 description: "Brief description"
 risk: safe
 source: community
+source_repo: owner/repo
+source_type: community
 author: "your-name-or-handle"
 tags: ["react", "typescript", "testing"]
 tools: [claude, cursor, gemini]
 ---
 ```
+
+#### `license` *(optional)*
+- **What it is:** SPDX license identifier for the upstream source material
+- **Format:** A valid SPDX expression (e.g. `MIT`, `Apache-2.0`, `CC-BY-4.0`)
+- **Example:** `license: MIT`
+- **When to use:** Declare when `source_repo` points to material under a known license. Omitting it signals "license not verified" to downstream tooling.
+
+#### `license_source` *(optional)*
+- **What it is:** Direct URL to the upstream license file
+- **Format:** Full URL string
+- **Example:** `license_source: "https://github.com/owner/repo/blob/main/LICENSE"`
+- **When to use:** Include alongside `license:` so automated tooling can verify the claim. If the upstream repo has no LICENSE file, omit this field.
+
+### Source-credit contract
+
+- External GitHub-derived skills should declare both `source_repo` and `source_type`.
+- `source_type: official` means the repo must appear in `README.md` under `### Official Sources`.
+- `source_type: community` means the repo must appear in `README.md` under `### Community Contributors`.
+- `source: self` plus `source_type: self` is the correct shape for original repository content.
+- PR CI checks README credit coverage for changed skills, so missing or misbucketed repo credits will block the PR once `source_repo` is declared.
 
 ---
 
