@@ -7,5 +7,5 @@
 - 새 작업이 시작되면 최근 3개의 커밋 로그(git log -n 3)와 현재 변경된 파일 상태(git status)를 확인해 줘. 마지막 커밋에서 어떤 내용이 푸시되었는지 파악하고, 그 내용에 이어서 다음으로 필요한 작업을 제안해 줘.
 - 코드 작성시 .rs 코드 (Rust)로 작성해줘. 그리고 모듈화하여 세부적으로 나눠줘. 한 파일당 500라인을 넘지 않도록 해줘.
 - Rust 코드를 작성할 때는 반드시 `cargo`를 사용하여 컴파일하고 테스트해줘.
-- 작업 완료 후 @paper/cft-sn-article.tex에 논문형식으로 적어주고 컴파일까지 완료해줘. 논문 가이드라인은 @paper/user-manual.pdf를 참고해줘.
+- 작업 완료 후 @paper/cft-sn-article.tex에 논문형식으로 적어주고 pdflatex 컴파일까지 완료해줘. 논문 가이드라인은 @paper/user-manual.pdf를 참고해줘.
 - Let's think step by step
