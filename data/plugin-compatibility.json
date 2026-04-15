@@ -2433,6 +2433,25 @@
       "runtime_files": []
     },
     {
+      "id": "axiom",
+      "path": "skills/axiom",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "azd-deployment",
       "path": "skills/azd-deployment",
       "targets": {
@@ -6856,6 +6875,25 @@
     {
       "id": "codebase-cleanup-tech-debt",
       "path": "skills/codebase-cleanup-tech-debt",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "codebase-to-wordpress-converter",
+      "path": "skills/codebase-to-wordpress-converter",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -12391,6 +12429,25 @@
       "runtime_files": []
     },
     {
+      "id": "helium-mcp",
+      "path": "skills/helium-mcp",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "helm-chart-scaffolding",
       "path": "skills/helm-chart-scaffolding",
       "targets": {
@@ -13385,6 +13442,25 @@
     {
       "id": "incident-runbook-templates",
       "path": "skills/incident-runbook-templates",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "indexing-issue-auditor",
+      "path": "skills/indexing-issue-auditor",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -14721,6 +14797,25 @@
       "runtime_files": []
     },
     {
+      "id": "linkedin-profile-optimizer",
+      "path": "skills/linkedin-profile-optimizer",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "linkerd-patterns",
       "path": "skills/linkerd-patterns",
       "targets": {
@@ -16010,6 +16105,25 @@
     {
       "id": "mlops-engineer",
       "path": "skills/mlops-engineer",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "mmx-cli",
+      "path": "skills/mmx-cli",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -19222,6 +19336,25 @@
       "runtime_files": []
     },
     {
+      "id": "puzzle-activity-planner",
+      "path": "skills/puzzle-activity-planner",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "pydantic-ai",
       "path": "skills/pydantic-ai",
       "targets": {
@@ -19528,6 +19661,44 @@
     {
       "id": "rag-implementation",
       "path": "skills/rag-implementation",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "rayden-code",
+      "path": "skills/rayden-code",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "rayden-use",
+      "path": "skills/rayden-use",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -22215,6 +22386,31 @@
       "blocked_reasons": {
         "codex": [],
         "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "skill-optimizer",
+      "path": "skills/skill-optimizer",
+      "targets": {
+        "codex": "blocked",
+        "claude": "blocked"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [
+        "target_specific_home_path"
+      ],
+      "blocked_reasons": {
+        "codex": [
+          "target_specific_home_path"
+        ],
+        "claude": [
+          "target_specific_home_path"
+        ]
       },
       "runtime_files": []
     },
@@ -25665,6 +25861,25 @@
       "runtime_files": []
     },
     {
+      "id": "vscode-extension-guide-en",
+      "path": "skills/vscode-extension-guide-en",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "vulnerability-scanner",
       "path": "skills/vulnerability-scanner",
       "targets": {
@@ -26159,6 +26374,25 @@
       "runtime_files": []
     },
     {
+      "id": "wordpress-centric-high-seo-optimized-blogwriting-skill",
+      "path": "skills/wordpress-centric-high-seo-optimized-blogwriting-skill",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "wordpress-penetration-testing",
       "path": "skills/wordpress-penetration-testing",
       "targets": {
@@ -26634,6 +26868,25 @@
       "runtime_files": []
     },
     {
+      "id": "zipai-optimizer",
+      "path": "skills/zipai-optimizer",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "zod-validation-expert",
       "path": "skills/zod-validation-expert",
       "targets": {
@@ -26711,14 +26964,14 @@
     }
   ],
   "summary": {
-    "total_skills": 1397,
+    "total_skills": 1410,
     "supported": {
-      "codex": 1367,
-      "claude": 1382
+      "codex": 1379,
+      "claude": 1394
     },
     "blocked": {
-      "codex": 30,
-      "claude": 15
+      "codex": 31,
+      "claude": 16
     },
     "manual_setup": 1
   }
