@@ -1,6 +1,3 @@
-- 작업 실행시 Skills(/multi-agent-brainstorming, /agent-orchestrator, /claude-scientific-skills, /scientific-writing)를 사용할 것.
-- MCP(@sequential-thinking은 필수)를 적절하게 사용할 것.
-- 작업 실행시 멀티 에이전트를 필수로 사용하시오.
 - 작업 실행시 @AGENTS.md를 참고하여 진행하시오.
 - 작업이 끝나면 진행한 작업 내용, 현재 이슈, 그리고 다음 세션에서 이어서 해야 할 목표를 @.claude/agent-memory/MEMORY.md 파일에 요약해서 업데이트해줘.
 - 새로운 작업이 시작되면 @.claude\agent-memory\MEMORY.md 파일을 먼저 읽고, 우리가 어디까지 작업했는지 파악한 다음 이어서 작업을 시작해 줘.
